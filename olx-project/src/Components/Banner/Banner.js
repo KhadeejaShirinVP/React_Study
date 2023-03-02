@@ -1,6 +1,7 @@
 import React from 'react'
 import './Banner.css';
 import Arrow from '../../assets/Arrow'
+import banlogo from '../../banner copy.png'
 
 function Banner() {
   return (
@@ -23,8 +24,8 @@ function Banner() {
         </div>
         <div className="banner">
           <img
-          src='assets/images/banner copy.png'
-            // src="../../../Images/banner copy.png"
+              src={banlogo}
+            // src="../../../images/banner copy.png"
             alt=""
           />
         </div>
