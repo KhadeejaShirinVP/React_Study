@@ -6,7 +6,9 @@ import Search from '../../assets/Search';
 import Arrow from '../../assets/Arrow';
 import SellButton from '../../assets/SellButton';
 import SellButtonPlus from '../../assets/SellButtonPlus';
-import { AuthContext, FirebaseContext } from '../../store/Context';
+import {  FirebaseContext } from '../../store/Context';
+import AuthContext from '../../store/AuthContext';
+
 function Header() {
   const {user}=useContext(AuthContext)
   const navigate=useNavigate()
@@ -38,9 +40,9 @@ function Header() {
           <Arrow></Arrow>
         </div>
         <div className="loginPage">
-
           <span> { user ? `Welcome ${user.diplayName}`: 'Login'}</span>
           <hr />
+
         </div>
          { user && <span onClick={()=>{
           firebase.auth().signOut();

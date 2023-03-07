@@ -3,11 +3,13 @@ import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
 import Signup from './Pages/Signup'
 import Login from './Pages/Login'
 import Home from './Pages/Home';
-import { AuthContext, FirebaseContext } from './store/Context';
+import { FirebaseContext } from './store/Context';
+import AuthContext from './store/AuthContext';
 
 
 function App() {
   const {setUser}=useContext(AuthContext)
+  
   const {firebase}= useContext(FirebaseContext)
 useEffect(()=>{
   firebase.auth().onAuthStateChanged((user)=>{
